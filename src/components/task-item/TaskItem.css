@@ -1,0 +1,64 @@
+@keyframes showTask{
+  from{
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes deleteTask{
+  from{
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+
+.task-item{
+  width: 87%;
+  height: 50px;
+  background-color:rgba(234, 244, 251, 0.649);
+  margin-bottom: 10px;
+  border-radius: 3px;
+  box-shadow: 0px 1px 1px 1px rgb(34 34 42);
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 20px;
+  animation-name: showTask;
+  animation-duration: .4s;
+}
+
+._delete {
+  animation-name: deleteTask;
+  animation-duration: .4s;
+}
+
+.task-item__delete{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  height: 25px;
+  width: 25px;
+  font-weight: 600;
+  border-radius: 3px;
+  cursor: pointer;
+  box-shadow: 0px 3px 3px 1px rgb(34 34 42);
+  transition: .2s;
+}
+.task-item__delete:hover{
+  background-color: #D25888;
+  color: white;
+}
+.task-item__delete:active{
+  transform: translateY(3px);
+  box-shadow: 0px 0px 3px 1px rgb(34 34 42);
+}
